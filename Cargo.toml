@@ -1,0 +1,22 @@
+[package]
+name = "simple-chat"
+version = "0.1.0"
+authors = ["okqin <jiqin1989@gmail.com>"]
+publish = false
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+dashmap = "6.0.1"
+futures = "0.3.30"
+tokio = { version = "1.39.2", features = [
+    "macros",
+    "rt-multi-thread",
+    "rt",
+    "net",
+] }
+tokio-stream = "0.1.15"
+tokio-util = { version = "0.7.11", features = ["codec"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+derive_more = { version = "=1.0.0-beta.7", features = ["display"] }
